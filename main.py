@@ -23,6 +23,8 @@ def main():
             if event.type == pygame.QUIT:
                 keepGoing = False
             elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_RIGHT:
+                    plane.plane_right()
                 if event.key == pygame.K_LEFT:
                     plane.plane_left()
 

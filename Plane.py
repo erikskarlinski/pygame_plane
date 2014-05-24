@@ -12,12 +12,14 @@ class Plane(pygame.sprite.Sprite):
         self.image = self.imageMaster
         self.rect = self.image.get_rect()
         self.rect.center = (250, 200)
-        self.speed = 2
+        self.speed = 15
         self.angulo = 0
 
     def update(self):
         pass
  
+    def plane_right(self):
+        self.rect.right += self.speed
     def plane_left(self):
         self.rect.left -= self.speed
         return
